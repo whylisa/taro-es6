@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
+import Child from './child'
 import './index.less'
 
 export default class Index extends Component {
@@ -54,8 +55,8 @@ componentWillReceiveProps () {
     console.log('页面显示是触发')
     // setState有两个参数，一个是我们的state，一个是回调函数，在回调里面可以立刻拿到刚才更新的值
     this.setState({name: 'hell'}, () => {
-      console.log(this.state.name)
-    })
+      console.log(this.state.name,this.state.age,this.state.test)
+    }) // 状态更新一定是异步的问题
     // console.log(this.state.name) // 还是之前的值
 
   }
@@ -63,13 +64,19 @@ componentWillReceiveProps () {
   componentDidHide () { 
     console.log('页面隐藏是触发')
   }
-
+  test() {
+    console.log('父组件传递子组件函数')
+  }
   render () { // 
+    let {name} = this.state
+    let obj = {name: [{
+      name: 1
+    }]}
     return (
       <View className='index'>
-        <Text>{this.state.name}</Text>
-        <Text>{this.state.test}</Text>
-        <Text>{this.state.age}</Text>
+        {/* h5可以这样写，小程序不行 要交on */}
+        {/* <Child name={name} obj={obj} test={this.test} />  */}
+        <Child name={name} obj={obj} ontest={this.test} /> 
 
       </View>
     )
