@@ -16,6 +16,7 @@ export default class Index extends Component {
   }
   componentWillMount () { 
     console.log('第一次渲染 只执行一次')
+    alert(this.$router.params.age)
   }
 
   componentDidMount () { 
