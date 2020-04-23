@@ -1,6 +1,7 @@
 ### 安装
   - 安装taro开发工具 @taro/cli yarn global add @taro/cli 
   - 使用：taro init myTaro
+  - 下载微信开发者工具
 ### 生命周期 state
   - 状态更新一定是异步的
   - react 的状态更新不一定是异步的，更新数据必须使用setState方法，直接赋值不会更新组件
@@ -24,3 +25,8 @@
      - 这样的话，在跳转成功的目标也的生命周期方法里就能通过this.$router.params 获取到
        传的参数，例如上诉跳转，在目标也的componentWillMount生命周期里获取入参
 ### 资源引用
+   - 在taro中可以像使用webpack那样自由的引用静态资源，而且不需要安装任何loader
+   - 引用样式文件
+   - 可以直接通过es6的import 语法来引用样式文件js文件
+   - 引用图片、音频、字体等文件同上 <Image />
+      - 也可以用require({'../path'})来引用，只有本地文件才可以这样做，如果是线上的直接赋值即可
