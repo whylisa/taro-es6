@@ -1,0 +1,5 @@
+dist/
+.temp/
+.rn_temp/
+blog/node_modules/
+.DS_Store

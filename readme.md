@@ -54,3 +54,5 @@
 ### 环境变量
     - process.env.TARO_ENV
     - 可以根据环境的不同来兼容不同的文件
+### blog 项目初始化
+    - 使用redux模板
