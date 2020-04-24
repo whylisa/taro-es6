@@ -1,6 +1,6 @@
-const rootPath = 'https://cnodejs.org/api.v1'
+const rootPath = 'https://cnodejs.org/api/v1'
 const apiObject = {
-    getTopics: rootPath + '/topocs',// 获取话题列表
+    getTopics: rootPath + '/topics',// 获取话题列表
     getTopicsInfo: rootPath + '/topic', // 获取话题详情
     checkUserToken: rootPath + '/accesstoken', // 获取用户token
     getUserInfo: rootPath + '/user/', // 获取用户信息
