@@ -1,5 +1,5 @@
 ### 安装
-  - 安装taro开发工具 @taro/cli yarn global add @taro/cli 
+  - 安装taro开发工具 @taro/cli yarn global add @tarojs/cli 
   - 使用：taro init myTaro
   - 下载微信开发者工具
 ### 生命周期 state
