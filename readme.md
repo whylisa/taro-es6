@@ -1,5 +1,5 @@
 ### 安装
-  - 安装taro开发工具 @taro/cli yarn global add @taro/cli 
+  - 安装taro开发工具 @taro/cli yarn global add @tarojs/cli 
   - 使用：taro init myTaro
   - 下载微信开发者工具
 ### 生命周期 state
@@ -54,5 +54,8 @@
 ### 环境变量
     - process.env.TARO_ENV
     - 可以根据环境的不同来兼容不同的文件
+<<<<<<< HEAD
 ### blog 项目初始化
     - 使用redux模板
+=======
+>>>>>>> 8e6511042dda77fb64c223af52caf9f1022c49d6
