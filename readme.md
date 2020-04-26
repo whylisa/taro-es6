@@ -76,6 +76,11 @@
 ### 业务模块开发
     - 话题列表开发
       - 切换话题分类
+        - 使用taro-ui的抽屉，使用时请下载package.json对应版本号
+        - 使用redux，进行数据管理，
+          - @connect()方法将 redux 与我们的页面进行连接connect 方法接受两个参数 mapStateToProps 与 mapDispatchToProps
+             mapStateToProps，函数类型，接受最新的 state 作为参数，用于将 state 映射到组件的 props
+             mapDispatchToProps，函数类型，接收 dispatch() 方法并返回期望注入到展示组件的 props 中的回调方法
       - 查看用户信息
       - 分页加载话题
 
