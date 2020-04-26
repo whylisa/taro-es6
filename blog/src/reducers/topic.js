@@ -1,3 +1,4 @@
+import TopicList from '../components/topicList/topicList'
 const TOPIC_STATE = {
     page: 1,
     limit: 20,

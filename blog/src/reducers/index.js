@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import menu from './menu'
-import TopicList from './topic'
+import topicList from './topic'
 
 export default combineReducers({
   menu,
-  TopicList
+  topicList,
 })

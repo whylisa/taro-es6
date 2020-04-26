@@ -1,7 +1,8 @@
 import Taro, { Component } from '@tarojs/taro' 
-import { View, Text, Button } from '@tarojs/components'
+import { ScrollView,View, Text, Button } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import {getTopicList} from '../../actions/topicList'
+import Topic from './topic'
 
 @connect(function(store) {
     return {...store.topicList,currentCata: store.menu.currentCata}
@@ -18,9 +19,12 @@ class TopicList extends Component {
         this.props.getTopicList({page,limit,type: currentCata.key})
     }
 render() {
-    return (<View>
-        <Text>{this.props.currentCata.value}</Text>    
-        </View>)
+    let {list} = this.props
+    console.log('----list',this.props)
+    console.log('----list',list)
+    return (<ScrollView>
+             { list.map((item) => <Topic item={item} />) }
+            </ScrollView>)
 }
 }
 
