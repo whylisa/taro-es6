@@ -7,7 +7,7 @@ const TOPIC_STATE = {
 export default function topicList(prestate=TOPIC_STATE, action) {
     switch(action.type) {
         case 'getTopicList':
-            return {...prestate,list: action.list}
+            return {...prestate,list: action.list,page:1}
         case 'appendTopicList':
             return {...prestate,list: prestate.list.concat(action.list),page: action.page}
         default:

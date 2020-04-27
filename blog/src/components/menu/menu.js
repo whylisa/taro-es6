@@ -34,8 +34,9 @@ class Menu extends Component {
  chickCata = (index) => {
      let { cataData } = this.props
      let clickData = cataData[index] // 获取点击项的数据
-     this.props.changeCata&&this.props.changeCata(clickData); // 点击分类触发切换分类方法
- 
+     if(clickData.key !== this.props.currentCata.key) {
+        this.props.changeCata&&this.props.changeCata(clickData); // 点击分类触发切换分类方法
+     }
  }
 render() {
     let { showDrawer, cataData} = this.props
