@@ -1,4 +1,3 @@
-import TopicList from '../components/topicList/topicList'
 const TOPIC_STATE = {
     page: 1,
     limit: 20,
@@ -9,6 +8,8 @@ export default function topicList(prestate=TOPIC_STATE, action) {
     switch(action.type) {
         case 'getTopicList':
             return {...prestate,list: action.list}
+        case 'appendTopicList':
+            return {...prestate,list: prestate.list.concat(action.list),page: action.page}
         default:
          return {...prestate}
     }
