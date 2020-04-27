@@ -3,10 +3,16 @@ import { View, Image, Text, Button } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import { myTimeToLocal } from '../../utils/date'
 class Topic extends Component {
+
+goToDetail(item){
+  console.log(1)
+  console.log(item)
+  Taro.navigateTo({url:'/pages/detail/index?topicid='+item.id})
+}
 render() {
     let {item} = this.props
     return (
-    <View className='topicList-topic'>
+    <View  className='topicList-topic' onClick={this.goToDetail.bind(this,item)} >
         <Image className='head-img' src={item.author.avatar_url} />
         <View className='right'>
             <View className='topic-title'>
