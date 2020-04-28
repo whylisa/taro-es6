@@ -33,15 +33,6 @@ render() {
 
 export default Topic
 
-12
-21
-23
-24
-12
-24
-21
-8
-15
 23
 20
 16
